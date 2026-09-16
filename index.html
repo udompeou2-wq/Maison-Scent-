@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Scent — Perfume Shop</title>
+  <meta name="description" content="Original perfumes and inspired/clone fragrances in 100ml and 10ml sizes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">MS</div>
+      <div>
+        <div class="brand-name">MAISON SCENT</div>
+        <div class="brand-sub">Original &amp; Inspired Fragrances</div>
+      </div>
+    </div>
+    <button class="cart-button" id="openCart" aria-label="Open shopping cart">
+      Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">CURATED FRAGRANCES</span>
+        <h1>Find a scent<br><em>worth remembering.</em></h1>
+        <p>Original bottles and inspired fragrances, available in a full 100ml bottle or a convenient 10ml size.</p>
+        <a class="hero-cta" href="#shop">Shop fragrances ↓</a>
+      </div>
+      <div class="hero-bottle" aria-hidden="true">
+        <div class="bottle-glow"></div>
+        <div class="cap"></div>
+        <div class="bottle">
+          <div class="bottle-label">MAISON<br><strong>SCENT</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">THE COLLECTION</span>
+          <h2>Popular scents</h2>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="original">Original</button>
+          <button class="filter" data-filter="clone">Inspired / Clone</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <div class="grid-empty" id="gridEmpty" style="display:none">No fragrances match this filter yet.</div>
+      </div>
+    </section>
+
+    <section class="how">
+      <div>
+        <span class="eyebrow">SIMPLE CHECKOUT</span>
+        <h2>Choose your size.<br>We handle the rest.</h2>
+      </div>
+      <div class="steps">
+        <div><b>01</b><span>Pick a fragrance and choose 100ml or 10ml.</span></div>
+        <div><b>02</b><span>Add as many scents as you want to your cart.</span></div>
+        <div><b>03</b><span>Enter your contact and delivery details.</span></div>
+        <div><b>04</b><span>Your order summary is sent to our Telegram.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <div>
+        <span class="eyebrow">YOUR BAG</span>
+        <h2>Cart</h2>
+      </div>
+      <button class="icon-btn" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Subtotal</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="primary-btn wide" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <section class="checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="drawer-head">
+        <div>
+          <span class="eyebrow">ORDER DETAILS</span>
+          <h2>Checkout</h2>
+        </div>
+        <button class="icon-btn" id="closeCheckout" aria-label="Close checkout">×</button>
+      </div>
+
+      <div class="checkout-layout">
+        <div>
+          <form id="checkoutForm">
+            <label>Customer name <span>*</span>
+              <input name="name" required placeholder="Your full name" autocomplete="name">
+            </label>
+            <label>Phone number <span>*</span>
+              <input name="phone" required type="tel" placeholder="+855 ..." autocomplete="tel">
+            </label>
+            <label>Location / delivery address <span>*</span>
+              <textarea name="location" required rows="3" placeholder="Address, landmark, or Google Maps link"></textarea>
+            </label>
+            <button type="button" class="secondary-btn" id="useLocation">📍 Use my current location</button>
+            <label>Additional information <small>(optional)</small>
+              <textarea name="notes" rows="3" placeholder="Preferred delivery time, notes, etc."></textarea>
+            </label>
+            <div class="secure-note">🔒 Your order is sent to the shop's private Telegram chat through the server. The Telegram bot token is never placed in the website code.</div>
+            <button class="primary-btn wide" type="submit" id="placeOrder">Place order</button>
+          </form>
+        </div>
+        <div class="checkout-summary">
+          <h3>Order summary</h3>
+          <div id="checkoutSummary"></div>
+          <div class="total-row"><span>Total</span><strong id="checkoutTotal">$0.00</strong></div>
+        </div>
+      </div>
+      <div id="orderStatus" class="order-status" role="status"></div>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
