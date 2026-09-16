@@ -12,8 +12,8 @@ const PRODUCTS = [
   {id:"valentia", name:"Valentia", type:"clone", brand:"Fragrance World", prices:{10:4,100:25}, image:"images/valentia.jpg", scent:"Romantic, floral, fruity"},
   {id:"hawas", name:"Hawas Ice", type:"clone", brand:"Rasasi", prices:{10:6,100:45}, image:"images/hawas.jpg", scent:"Cool aquatic, fresh citrus"},
   {id:"optimistic-her", name:"Optimistic Her", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"images/optimistic-her.jpg", scent:"Floral fruity, feminine"},
-  {id:"optimistic-paradox", name:"Optimistic Paradox", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"images/optimistic-paradox.jpg", scent:"Sweet floral, playful"},
-  {id:"just-wardi", name:"FW Just Wardi", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"images/just-wardi.jpg", scent:"Soft floral, powdery, elegant"}
+  {id:"optimistic-paradox", name:"Optimistic Paradox", type:"clone", brand:"Fragrance World", prices:{10:5,100:35}, image:"images/optimistic-paradox.jpg", scent:"Sweet floral, playful"},
+  {id:"just-wardi", name:"FW Just Wardi", type:"clone", brand:"Fragrance World", prices:{10:5,100:27}, image:"images/just-wardi.jpg", scent:"Soft floral, powdery, elegant"}
 ];
 
 const $ = (sel) => document.querySelector(sel);
