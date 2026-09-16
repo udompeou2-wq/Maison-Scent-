@@ -4,16 +4,16 @@
 // `scent` is the short scent-notes description shown on the card.
 // ---------------------------------------------------------------------------
 const PRODUCTS = [
-  {id:"proud", name:"Proud of You Intense", type:"clone", brand:"Fragrance World", prices:{10:4,100:25}, image:"images/proud.jpg", scent:"Warm vanilla, amber, fruity notes"},
-  {id:"rebel", name:"9pm Rebel", type:"clone", brand:"Afnan", prices:{10:7,100:45}, image:"images/rebel.jpg", scent:"Spicy, woody, with red fruits"},
-  {id:"nightout", name:"9pm Night Out", type:"clone", brand:"Afnan", prices:{10:6,100:45}, image:"images/nightout.jpg", scent:"Dark, smoky, citrus and spice"},
-  {id:"afnan", name:"9pm AFNAN", type:"clone", brand:"Afnan", prices:{10:5,100:35}, image:"images/afnan.jpg", scent:"Fresh, sweet, long-lasting evening scent"},
-  {id:"imaginari", name:"Imaginari", type:"clone", brand:"Fragrance World", prices:{10:4,100:25}, image:"images/imaginari.jpg", scent:"Citrus, floral, uplifting"},
-  {id:"valentia", name:"Valentia", type:"clone", brand:"Fragrance World", prices:{10:4,100:25}, image:"images/valentia.jpg", scent:"Romantic, floral, fruity"},
-  {id:"hawas", name:"Hawas Ice", type:"clone", brand:"Rasasi", prices:{10:6,100:45}, image:"images/hawas.jpg", scent:"Cool aquatic, fresh citrus"},
-  {id:"optimistic-her", name:"Optimistic Her", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"images/optimistic-her.jpg", scent:"Floral fruity, feminine"},
-  {id:"optimistic-paradox", name:"Optimistic Paradox", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"images/optimistic-paradox.jpg", scent:"Sweet floral, playful"},
-  {id:"just-wardi", name:"FW Just Wardi", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"images/just-wardi.jpg", scent:"Soft floral, powdery, elegant"}
+  {id:"proud", name:"Proud of You Intense", type:"clone", brand:"Fragrance World", prices:{10:4,100:25}, image:"proud.jpg", scent:"Warm vanilla, amber, fruity notes"},
+  {id:"rebel", name:"9pm Rebel", type:"clone", brand:"Afnan", prices:{10:7,100:45}, image:"rebel.jpg", scent:"Spicy, woody, with red fruits"},
+  {id:"nightout", name:"9pm Night Out", type:"clone", brand:"Afnan", prices:{10:6,100:45}, image:"nightout.jpg", scent:"Dark, smoky, citrus and spice"},
+  {id:"afnan", name:"9pm AFNAN", type:"clone", brand:"Afnan", prices:{10:5,100:35}, image:"afnan.jpg", scent:"Fresh, sweet, long-lasting evening scent"},
+  {id:"imaginari", name:"Imaginari", type:"clone", brand:"Fragrance World", prices:{10:4,100:25}, image:"imaginari.jpg", scent:"Citrus, floral, uplifting"},
+  {id:"valentia", name:"Valentia", type:"clone", brand:"Fragrance World", prices:{10:4,100:25}, image:"valentia.jpg", scent:"Romantic, floral, fruity"},
+  {id:"hawas", name:"Hawas Ice", type:"clone", brand:"Rasasi", prices:{10:6,100:45}, image:"hawas.jpg", scent:"Cool aquatic, fresh citrus"},
+  {id:"optimistic-her", name:"Optimistic Her", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"optimistic-her.jpg", scent:"Floral fruity, feminine"},
+  {id:"optimistic-paradox", name:"Optimistic Paradox", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"optimistic-paradox.jpg", scent:"Sweet floral, playful"},
+  {id:"just-wardi", name:"FW Just Wardi", type:"clone", brand:"Fragrance World", prices:{10:5,100:29}, image:"just-wardi.jpg", scent:"Soft floral, powdery, elegant"}
 ];
 
 const $ = (sel) => document.querySelector(sel);
