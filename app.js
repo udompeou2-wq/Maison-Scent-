@@ -61,45 +61,17 @@ function renderProducts(filter = "all") {
     const card = document.createElement("article");
     card.className = "product-card";
     card.dataset.id = p.id;
-    card.innerHTML = `
-  <div class="product-visual">
-    <img src="${escapeHtml(p.image)}"
-         alt="${escapeHtml(p.name)}"
-         loading="lazy">
-
-    <span class="tag">
-      ${p.type === "original" ? "Original" : "Inspired / Clone"}
-    </span>
-  </div>
-
-  <h3>${escapeHtml(p.name)}</h3>
-
-  <p class="meta">${escapeHtml(p.brand)}</p>
-
-  <p class="scent">${escapeHtml(p.scent)}</p>
-
-  <div class="price">
-    <span class="old-price">${money(p.prices.original)}</span>
-    <strong>${money(p.prices.sale)}</strong>
-  </div>
-
-  <div class="qty-stepper">
-    <button type="button"
-            data-step="-1"
-            aria-label="Decrease quantity">−</button>
-
-    <b class="qty-val">1</b>
-
-    <button type="button"
-            data-step="1"
-            aria-label="Increase quantity">+</button>
-  </div>
-
-  <button class="add-btn" type="button">
-    Add to cart
-  </button>
-`;
-
+    card.innerHTML = ` 
+    <div class="product-visual"> 
+    <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy"> 
+    <span class="tag">${p.type === "original" ? "Original" : "Inspired / Clone"}</span> 
+    </div> <h3>${escapeHtml(p.name)}</h3> 
+    <p class="meta">${escapeHtml(p.brand)}</p> 
+    <p class="scent">${escapeHtml(p.scent)}</p> 
+    <div class="size-picker" role="group" aria-label="Choose size for ${escapeHtml(p.name)}"> 
+    <button type="button" class="size-opt" data-ml="100">100ml<b>${money(p.prices[100])}</b></button> <button type="button" class="size-opt" data-ml="10">10ml<b>${money(p.prices[10])}</b></button> </div> 
+    <div class="qty-stepper"> <button type="button" data-step="-1" aria-label="Decrease quantity">−</button> <b class="qty-val">1</b> 
+    <button type="button" data-step="1" aria-label="Increase quantity">+</button> </div> <button class="add-btn" type="button">Add to cart</button>`;
     const sizeBtns = card.querySelectorAll(".size-opt");
     sizeBtns.forEach((btn) => {
       if (Number(btn.dataset.ml) === d.ml) btn.classList.add("selected");
